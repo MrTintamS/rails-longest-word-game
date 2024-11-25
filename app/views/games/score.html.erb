@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Game Results</h1>
+  <% if @message.present? %>
+    <div class="message <%= @word_in_grid && @valid_word ? 'success' : 'error' %>">
+      <%= @message %>
+    </div>
+  <% end %>
+  <p>Your total score: <%= session[:score] || 0 %></p>
+  <a href="<%= new_path %>" class="link-back">Play Again</a>
+</div>
